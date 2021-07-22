@@ -11,6 +11,7 @@ import {GetTicketsRes} from '../models/get-tickets-res.model';
 
 import {finalize} from 'rxjs/operators';
 
+import '../extension-method';
 @Component({
     selector: 'app-list-ticket',
     templateUrl: './list-ticket.component.html',
@@ -37,6 +38,7 @@ export class ListTicketComponent extends AppComponentBase implements OnInit {
         this.filters.skip = this.primengTableHelper.getSkipCount(this.paginator, $event);
         this.filters.take = this.primengTableHelper.getMaxResultCount(this.paginator, $event);
         this.list();
+
     }
 
     list(): void {
